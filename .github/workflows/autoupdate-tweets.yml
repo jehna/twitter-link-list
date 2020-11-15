@@ -1,0 +1,13 @@
+name: Auto update tweets to Laststate
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+jobs:
+  run-sync:
+    name: Run Sync
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+      - run: yarn --frozen-lockfile
+      - run: yarn workspace twitter-link-list-worker start
