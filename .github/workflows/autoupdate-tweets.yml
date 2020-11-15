@@ -11,3 +11,10 @@ jobs:
       - uses: actions/setup-node@v1
       - run: yarn --frozen-lockfile
       - run: yarn workspace twitter-link-list-worker start
+        env:
+          TW_ACCESS_TOKEN: ${{ secrets.TW_ACCESS_TOKEN }}
+          TW_ACCESS_TOKEN_SECRET: ${{ secrets.TW_ACCESS_TOKEN_SECRET }}
+          TW_CONSUMER_API_KEY: ${{ secrets.TW_CONSUMER_API_KEY }}
+          TW_CONSUMER_API_SECRET_KEY: ${{ secrets.TW_CONSUMER_API_SECRET_KEY }}
+          LASTSTATE_URL: ${{ secrets.LASTSTATE_URL }}
+          LASTSTATE_TOKEN: ${{ secrets.LASTSTATE_TOKEN }}
