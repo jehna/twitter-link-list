@@ -13,6 +13,7 @@ export async function* getTweets(screenName, maxId) {
   const params = {
     screen_name: screenName,
     count: 200,
+    tweet_mode: "extended",
     ...(maxId ? { max_id: maxId.toString() } : {})
   }
   const tweets = await get("statuses/user_timeline", params)
