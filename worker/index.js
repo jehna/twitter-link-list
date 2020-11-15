@@ -14,6 +14,7 @@ async function run() {
     if (isRetweet || urls.length === 0 || isReply) continue
     tweets.push({ text, urls })
   }
+  await put([])
   await put(tweets)
 }
 
