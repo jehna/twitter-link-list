@@ -46,6 +46,7 @@ This project uses:
 * [Longwood](http://npmjs.com/package/longwood) as the frontend rendering lib
 * No build steps
 * ES modules all the way (in frontend & worker)
+* [Laststate](https://laststate.io) as dababase/"backend"
 
 ## Contributing
 
