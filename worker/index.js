@@ -10,7 +10,8 @@ async function run() {
     entities: { urls },
     retweeted_status: isRetweet
   } of getTweets("luotojesse")) {
-    if (isRetweet || urls.length === 0) continue
+    const isReply = text.startsWith("@")
+    if (isRetweet || urls.length === 0 || isReply) continue
     tweets.push({ text, urls })
   }
   await put(tweets)
