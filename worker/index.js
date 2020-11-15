@@ -6,10 +6,12 @@ async function run() {
   const tweets = []
   for await (const {
     id_str: id,
-    text,
-    entities: { urls }
+    full_text: text,
+    entities: { urls },
+    retweeted_status: isRetweet
   } of getTweets("luotojesse")) {
-    if (urls.length > 0) tweets.push({ text, id, urls })
+    if (isRetweet || urls.length === 0) continue
+    tweets.push({ text, urls })
   }
   await put(tweets)
 }
