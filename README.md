@@ -42,7 +42,6 @@ The Github Action uploads the most recent tweets to Laststate every 15 minutes.
 
 This project uses:
 * Async iterators and async generator functions
-* ES modules
 * [Longwood](http://npmjs.com/package/longwood) as the frontend rendering lib
 * No build steps
 * ES modules all the way (in frontend & worker)
