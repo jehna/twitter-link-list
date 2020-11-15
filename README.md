@@ -7,7 +7,7 @@ This project fetches my Twitter links and generates a webpage that lists them.
 
 You can see the live website at:
 
-https://sharp-mcclintock-68251e.netlify.app/
+https://links.thejunkland.com/
 
 You can search through the tweets using the search input
 
