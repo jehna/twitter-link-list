@@ -3,5 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "Jesse Luoto <jesse.luoto@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "start": "serve frontend"
+  },
+  "dependencies": {
+    "serve": "^11.3.2"
+  }
 }
