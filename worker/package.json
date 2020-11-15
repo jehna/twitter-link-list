@@ -1,0 +1,16 @@
+{
+  "name": "twitter-link-list-worker",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "engines": {"node": "15"},
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "node-fetch": "^2.6.1",
+    "twitter": "^1.7.1"
+  },
+  "type": "module"
+}
