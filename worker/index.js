@@ -1,5 +1,5 @@
 import "./env.js"
-import { put } from "./laststate.js"
+import { get, put } from "./laststate.js"
 import { getTweets } from "./twitter.js"
 
 async function run() {
@@ -14,6 +14,10 @@ async function run() {
     if (isRetweet || urls.length === 0 || isReply) continue
     tweets.push({ text, urls })
   }
+
+  const existing = get()
+  if (existing.length === tweets.length) return
+
   await put([])
   await put(tweets)
 }

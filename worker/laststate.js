@@ -1,14 +1,23 @@
 import fetch from "node-fetch"
 
-export async function put(data) {
+async function request(method, params = {}) {
   const res = await fetch(process.env.LASTSTATE_URL, {
-    method: "POST",
+    method,
     mode: "cors",
     headers: {
       authorization: `Bearer ${process.env.LASTSTATE_TOKEN}`,
       "content-type": "application/json"
     },
-    body: JSON.stringify(data)
+    ...params
   })
   if (!res.ok) throw new Error(await res.text())
+  return await res.json()
+}
+
+export async function put(data) {
+  return await request("POST", { body: JSON.stringify(data) })
+}
+
+export async function get(data) {
+  return await request("GET")
 }
