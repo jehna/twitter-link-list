@@ -6,7 +6,7 @@ export default function SearchInput({ searchInput, setSearchInput }) {
       text(`Search: `),
       input({
         value: searchInput,
-        onkeyup: (e) => setSearchInput(e.target.value)
+        oninput: (e) => setSearchInput(e.target.value)
       })
     )
   );
