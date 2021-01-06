@@ -5,7 +5,8 @@
   "author": "Jesse Luoto <jesse.luoto@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "serve frontend"
+    "start": "serve frontend",
+    "build": "rm -r frontend/react && yarn --cwd frontend-react build && mv frontend-react/build frontend/react"
   },
   "private": true,
   "workspaces": ["worker"],
