@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "start": "serve frontend",
-    "build": "rm -r frontend/react && yarn --cwd frontend-react build && mv frontend-react/build frontend/react"
+    "build": "rm -rf frontend/react && yarn --cwd frontend-react build && mv frontend-react/build frontend/react"
   },
   "private": true,
   "workspaces": ["worker"],
