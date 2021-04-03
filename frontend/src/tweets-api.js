@@ -1,4 +1,4 @@
 export async function loadTweets() {
-  const res = await fetch("https://api.laststate.io/states/twitter-list-links");
-  return res.json();
+  const res = await fetch("/tmp-data-dump-before-transition-to-heroku.json")
+  return res.json()
 }
