@@ -1,7 +1,5 @@
 name: Update tweets to Laststate
 on:
-  schedule:
-    - cron: "*/15 * * * *"
   workflow_dispatch:
 jobs:
   run-sync:
